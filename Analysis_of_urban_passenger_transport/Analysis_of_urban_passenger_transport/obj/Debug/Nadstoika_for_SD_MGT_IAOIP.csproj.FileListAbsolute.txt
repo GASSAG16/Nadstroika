@@ -1,0 +1,14 @@
+C:\Users\П\AppData\Local\Temporary Projects\Nadstoika_for_SD_MGT_IAOIP\bin\Debug\Nadstoika_for_SD_MGT_IAOIP.exe.config
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\bin\Debug\For_mgt_local.mdf
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\bin\Debug\For_mgt_local_log.ldf
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\bin\Debug\Nadstoika_for_SD_MGT_IAOIP.exe.config
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\bin\Debug\Nadstoika_for_SD_MGT_IAOIP.exe
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\bin\Debug\Nadstoika_for_SD_MGT_IAOIP.pdb
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\obj\Debug\Nadstoika_for_SD_MGT_IAOIP.Startovya.resources
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\obj\Debug\Nadstoika_for_SD_MGT_IAOIP.Properties.Resources.resources
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\obj\Debug\Nadstoika_for_SD_MGT_IAOIP.VvodMarshRedact.resources
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\obj\Debug\Nadstoika_for_SD_MGT_IAOIP.csproj.GenerateResource.Cache
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\obj\Debug\Nadstoika_for_SD_MGT_IAOIP.exe
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\obj\Debug\Nadstoika_for_SD_MGT_IAOIP.pdb
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\obj\Debug\Nadstoika_for_SD_MGT_IAOIP.VvodMarshRedact.ru-RU.resources
+G:\swer\Nadstoika_for_SD_MGT_IAOIP\Nadstoika_for_SD_MGT_IAOIP\obj\Debug\ru-RU\Nadstoika_for_SD_MGT_IAOIP.resources.dll
