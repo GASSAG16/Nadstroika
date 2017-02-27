@@ -15,7 +15,7 @@ namespace Analysis_of_urban_passenger_transport
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fmMain());
+            Application.Run(new Forms.frmViewmode());
         }
     }
 }
