@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AddonModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AddonEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="Routes" EntityType="AddonModel.Route" />
+    <EntitySet Name="tip_trans" EntityType="AddonModel.tip_trans" />
+    <AssociationSet Name="FK_Route_tip_trans" Association="AddonModel.FK_Route_tip_trans">
+      <End Role="tip_trans" EntitySet="tip_trans" />
+      <End Role="Route" EntitySet="Routes" />
+    </AssociationSet>
+    <FunctionImport Name="requestRoute" ReturnType="Collection(AddonModel.requestRoute)">
+      <Parameter Name="Param1" Mode="In" Type="String" />
+      <Parameter Name="Param2" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Route">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="id_tip" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RouteNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TypeOfFlight" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EndA" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="EndB" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="EndC" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="SwitchingToRoutes" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="FeaturesOfRoute" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="MachineName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PrintDate" Type="DateTime" Precision="0" />
+    <Property Name="Printing" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tip_trans" Relationship="AddonModel.FK_Route_tip_trans" FromRole="Route" ToRole="tip_trans" />
+  </EntityType>
+  <EntityType Name="tip_trans">
+    <Key>
+      <PropertyRef Name="id_tip" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="id_tip" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Opisanie" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Routes" Relationship="AddonModel.FK_Route_tip_trans" FromRole="tip_trans" ToRole="Route" />
+  </EntityType>
+  <Association Name="FK_Route_tip_trans">
+    <End Role="tip_trans" Type="AddonModel.tip_trans" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Route" Type="AddonModel.Route" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tip_trans">
+        <PropertyRef Name="id_tip" />
+      </Principal>
+      <Dependent Role="Route">
+        <PropertyRef Name="id_tip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="requestRoute">
+    <Property Type="String" Name="id_tip" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="RouteNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TypeOfFlight" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EndA" Nullable="true" />
+    <Property Type="String" Name="EndB" Nullable="true" />
+    <Property Type="String" Name="EndC" Nullable="true" />
+    <Property Type="String" Name="SwitchingToRoutes" Nullable="true" />
+    <Property Type="String" Name="FeaturesOfRoute" Nullable="true" />
+    <Property Type="String" Name="MachineName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PrintDate" Nullable="true" />
+    <Property Type="String" Name="Printing" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

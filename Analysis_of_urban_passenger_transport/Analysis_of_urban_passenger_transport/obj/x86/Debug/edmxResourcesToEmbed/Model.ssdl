@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище AddonModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Хранилище AddonModelContainer">
+    <EntitySet Name="Route" EntityType="Хранилище AddonModel.Route" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tip_trans" EntityType="Хранилище AddonModel.tip_trans" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Route_tip_trans" Association="Хранилище AddonModel.FK_Route_tip_trans">
+      <End Role="tip_trans" EntitySet="tip_trans" />
+      <End Role="Route" EntitySet="Route" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Route">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_tip" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RouteNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TypeOfFlight" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EndA" Type="varchar(max)" />
+    <Property Name="EndB" Type="varchar(max)" />
+    <Property Name="EndC" Type="varchar(max)" />
+    <Property Name="SwitchingToRoutes" Type="varchar(max)" />
+    <Property Name="FeaturesOfRoute" Type="varchar(max)" />
+    <Property Name="MachineName" Type="varchar" MaxLength="50" />
+    <Property Name="PrintDate" Type="date" />
+    <Property Name="Printing" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tip_trans">
+    <Key>
+      <PropertyRef Name="id_tip" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_tip" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Opisanie" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_Route_tip_trans">
+    <End Role="tip_trans" Type="Хранилище AddonModel.tip_trans" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Route" Type="Хранилище AddonModel.Route" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tip_trans">
+        <PropertyRef Name="id_tip" />
+      </Principal>
+      <Dependent Role="Route">
+        <PropertyRef Name="id_tip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="requestRoute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Param1" Type="varchar" Mode="In" />
+    <Parameter Name="Param2" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

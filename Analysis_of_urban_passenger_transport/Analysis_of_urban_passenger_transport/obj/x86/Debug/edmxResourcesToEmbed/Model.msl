@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище AddonModelContainer" CdmEntityContainer="AddonEntities">
+    <EntitySetMapping Name="Routes">
+      <EntityTypeMapping TypeName="AddonModel.Route">
+        <MappingFragment StoreEntitySet="Route">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_tip" ColumnName="id_tip" />
+          <ScalarProperty Name="RouteNumber" ColumnName="RouteNumber" />
+          <ScalarProperty Name="TypeOfFlight" ColumnName="TypeOfFlight" />
+          <ScalarProperty Name="EndA" ColumnName="EndA" />
+          <ScalarProperty Name="EndB" ColumnName="EndB" />
+          <ScalarProperty Name="EndC" ColumnName="EndC" />
+          <ScalarProperty Name="SwitchingToRoutes" ColumnName="SwitchingToRoutes" />
+          <ScalarProperty Name="FeaturesOfRoute" ColumnName="FeaturesOfRoute" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="PrintDate" ColumnName="PrintDate" />
+          <ScalarProperty Name="Printing" ColumnName="Printing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tip_trans">
+      <EntityTypeMapping TypeName="AddonModel.tip_trans">
+        <MappingFragment StoreEntitySet="tip_trans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="id_tip" ColumnName="id_tip" />
+          <ScalarProperty Name="Opisanie" ColumnName="Opisanie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="requestRoute" FunctionName="Хранилище AddonModel.requestRoute">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AddonModel.requestRoute">
+          <ScalarProperty Name="id_tip" ColumnName="id_tip" />
+          <ScalarProperty Name="RouteNumber" ColumnName="RouteNumber" />
+          <ScalarProperty Name="TypeOfFlight" ColumnName="TypeOfFlight" />
+          <ScalarProperty Name="EndA" ColumnName="EndA" />
+          <ScalarProperty Name="EndB" ColumnName="EndB" />
+          <ScalarProperty Name="EndC" ColumnName="EndC" />
+          <ScalarProperty Name="SwitchingToRoutes" ColumnName="SwitchingToRoutes" />
+          <ScalarProperty Name="FeaturesOfRoute" ColumnName="FeaturesOfRoute" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="PrintDate" ColumnName="PrintDate" />
+          <ScalarProperty Name="Printing" ColumnName="Printing" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
